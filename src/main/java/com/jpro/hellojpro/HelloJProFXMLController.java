@@ -9,6 +9,7 @@ import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
@@ -21,12 +22,16 @@ import java.util.ResourceBundle;
  */
 public class HelloJProFXMLController implements Initializable
 {
+    @FXML
     public Label platformLabel;
     @FXML
     protected StackPane root;
 
     @FXML
     protected Node logo;
+
+    @FXML
+    private ComboBox<String> cbxCountry;
 
     protected JProApplication jProApplication;
 
@@ -36,6 +41,7 @@ public class HelloJProFXMLController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
+        cbxCountry.getItems().addAll("پاکستان", "بھارت", "چين", "مصر " );
         platformLabel.setText(String.format("Platform: %s", WebAPI.isBrowser() ? "Browser" : "Desktop"));
     }
 
