@@ -27,7 +27,7 @@
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label text="نام:" />
-                        <TextField prefHeight="53.0" prefWidth="235.0" />
+                        <TextField prefHeight="53.0" prefWidth="235.0" text="عابد مقبول" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
