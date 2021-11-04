@@ -41,6 +41,11 @@ javafx {
 }
 
 
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 /**
  ******************  jpro Configuration ******************
@@ -51,8 +56,8 @@ apply plugin: 'com.sandec.jpro'
 /**
  * App Main Class
  */
-//mainClassName = 'com.jpro.hellojpro.HelloJPro'
-mainClassName = 'com.jpro.hellojpro.HelloJProFXML'
+mainClassName = 'com.jpro.hellojpro.HelloJPro'
+//mainClassName = 'com.jpro.hellojpro.HelloJProFXML'
 
 /**
  * jpro settings

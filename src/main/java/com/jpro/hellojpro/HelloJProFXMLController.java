@@ -41,7 +41,7 @@ public class HelloJProFXMLController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        cbxCountry.getItems().addAll("پاکستان", "بھارت", "چين", "مصر " );
+        cbxCountry.getItems().addAll("پاکستان", "ہندستان", "چائنا", "کوئی بھی" );
         cbxCountry.getSelectionModel().select(0);
         platformLabel.setText(String.format("Platform: %s", WebAPI.isBrowser() ? "Browser" : "Desktop"));
     }
