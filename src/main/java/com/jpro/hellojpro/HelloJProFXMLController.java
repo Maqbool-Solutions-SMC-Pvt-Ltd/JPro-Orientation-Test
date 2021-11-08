@@ -20,8 +20,8 @@ import java.util.ResourceBundle;
 /**
  * Created by TB on 25.02.16.
  */
-public class HelloJProFXMLController implements Initializable
-{
+public class HelloJProFXMLController implements Initializable {
+
     @FXML
     public Label platformLabel;
     @FXML
@@ -36,18 +36,19 @@ public class HelloJProFXMLController implements Initializable
     protected JProApplication jProApplication;
 
     protected ParallelTransition pt;
-
+    @FXML
+    private Label lblFooter;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources)
-    {
-        cbxCountry.getItems().addAll("پاکستان", "ہندستان", "چائنا", "کوئی بھی" );
+    public void initialize(URL location, ResourceBundle resources) {
+        cbxCountry.getItems().addAll("پاکستان", "ہندستان", "چائنا", "کوئی بھی");
         cbxCountry.getSelectionModel().select(0);
         platformLabel.setText(String.format("Platform: %s", WebAPI.isBrowser() ? "Browser" : "Desktop"));
+
+        lblFooter.setStyle("-fx-font-family: DaunPenh; -fx-font-size: 35;");
     }
 
-    protected void initLogoAnimation(Node logo)
-    {
+    protected void initLogoAnimation(Node logo) {
         ScaleTransition st = new ScaleTransition(Duration.millis(1000), logo);
         st.setByX(-0.5);
         st.setByY(-0.5);
@@ -63,16 +64,14 @@ public class HelloJProFXMLController implements Initializable
         pt = new ParallelTransition(st, ft);
         pt.play();
 
-        if(WebAPI.isBrowser()) {
+        if (WebAPI.isBrowser()) {
             jProApplication.getWebAPI().addInstanceCloseListener(() -> {
                 pt.stop();
             });
         }
     }
 
-
-    public void init(JProApplication jProApplication)
-    {
+    public void init(JProApplication jProApplication) {
         this.jProApplication = jProApplication;
         initLogoAnimation(this.logo);
     }
