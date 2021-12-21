@@ -56,7 +56,7 @@ apply plugin: 'com.sandec.jpro'
 /**
  * App Main Class
  */
-// mainClassName = 'com.jpro.hellojpro.HelloJPro'
+//mainClassName = 'com.jpro.hellojpro.HelloJPro'
 mainClassName = 'com.jpro.hellojpro.HelloJProFXML'
 
 /**
@@ -65,7 +65,7 @@ mainClassName = 'com.jpro.hellojpro.HelloJProFXML'
 jpro {
   // for debugging
   // JVMArgs << '-agentlib:jdwp=transport=dt_socket,server=n,address=5006,suspend=y'
-  visible = true
+  visible = false
 
   JVMArgs << '-Xmx1000m'
 
