@@ -1,4 +1,4 @@
-module org.openjfx.gradle.javafx.test {
+module JProOrientationTest {
     requires javafx.controls;
     requires javafx.fxml;
     requires jpro.webapi;
