@@ -33,6 +33,9 @@ compileJava {
 
 repositories {
   jcenter()
+  maven {
+    url "https://sandec.jfrog.io/artifactory/repo"
+  }
 }
 
 javafx {
